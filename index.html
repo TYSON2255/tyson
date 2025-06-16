@@ -1,0 +1,65 @@
+<!DOCTYPE html><html lang="en" dir="ltr"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Channels - Tyson Team</title>
+  <link rel="stylesheet" href="css/VIhPjZfrf0AF.css">
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- الشريط العلوي -->
+  <nav class="navbar">
+    <button class="menu-button" onclick="toggleMenu()">☰ Menu</button>
+    <div class="menu-list">
+      <a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a>
+      <a href="info.html" data-en="Info" data-ar="معلومات">Info</a>
+      <a href="projects.html" data-en="Projects" data-ar="المشاريع">Projects</a>
+      <a href="channels.html" data-en="Channels" data-ar="القنوات">Channels</a>
+      <a href="contact.html" data-en="Contact" data-ar="للتواصل">Contact</a>
+      <a href="products.html" data-en="Products" data-ar="المنتجات">Products</a>
+    </div>
+  </nav>
+
+  <!-- زر اللغة -->
+  <button class="lang-toggle" onclick="toggleLanguage()">🌐</button>
+
+  <!-- المحتوى الرئيسي -->
+  <main class="main-content">
+    <h1 class="main-title" data-en="Channels" data-ar="القنوات">Channels</h1>
+    <p class="main-subtitle" data-en="Official groups and links" data-ar="روابطنا الرسمية والجروبات">Official groups and links</p>
+
+    <section class="channels-section">
+  <div class="channel-card" style="animation-delay: 0s;">
+    <a href="https://chat.whatsapp.com/Cn3i20rJieG5SdjrOawv15" target="_blank">
+      <h3 data-en="Support Group" data-ar="جروب الدعم">Support Group</h3>
+      <p data-en="Join our support group on Telegram" data-ar="انضم لجروب الدعم على تيليجرام">Join our support group on Telegram</p>
+    </a>
+  </div>
+
+  <div class="channel-card" style="animation-delay: 0.3s;">
+    <a href="https://whatsapp.com/channel/0029Vb5gZjdHgZWYnLuWuz0x" target="_blank">
+      <h3 data-en="Official Channel" data-ar="القناة الرسمية">Official Channel</h3>
+      <p data-en="Follow our latest news and updates" data-ar="تابع آخر أخبارنا وتحديثاتنا">Follow our latest news and updates</p>
+    </a>
+  </div>
+    </section>
+  </main>
+
+  <!-- سكربت اللغة -->
+  <script>
+    function toggleLanguage() {
+      const body = document.body;
+      const isRTL = body.getAttribute("dir") === "rtl";
+      body.setAttribute("dir", isRTL ? "ltr" : "rtl");
+
+      document.querySelectorAll("[data-en]").forEach(el => {
+        el.textContent = isRTL ? el.dataset.en : el.dataset.ar;
+      });
+    }
+
+    function toggleMenu() {
+      document.querySelector('.menu-list').classList.toggle('show');
+    }
+  </script>
+
+
+</body></html>
